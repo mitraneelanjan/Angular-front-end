@@ -1,21 +1,21 @@
 <div class="container">
-    <h2>Add Employee details</h2>
-    <form (submit) = "addContacts()">
+    <h2 class="page-header">Add Employee details</h2>
+    <form (submit) = "addContact()">
         <div class="form-group">
             <label >Name</label>
-            <input type="text" [(ngModel)] = "name" name="name" >
+            <input type="text" [(ngModel)] = "name" name="name" class="form-control">
         </div>
         <div class="form-group">
             <label >AGE</label>
-            <input type="text" [(ngModel)] = "age" name="age" >
+            <input type="text" [(ngModel)] = "age" name="age" class="form-control">
         </div>
         <div class="form-group">
             <label >Phone</label>
-            <input type="text" [(ngModel)] = "phone" name="phone" >
+            <input type="text" [(ngModel)] = "phone" name="phone" class="form-control">
         </div>
         <div class="form-group">
             <label >Gender</label>
-            <input type="text" [(ngModel)] = "gender" name="gender" >
+            <input type="text" [(ngModel)] = "gender" name="gender" class="form-control">
         </div>
         <input type="submit" value="Add">
     </form>
@@ -24,15 +24,15 @@
 <hr>
 
 
-<div class="container">
+<!--  <div class="container">
 <input [(ngModel)]="phone" placeholder="enter phone no.">
 <div >
 
 
-</div>
+  </div>
 <button (click)="getContact(phone)" >getcontact</button>
 <div>{{name}}
         {{age}}
         {{phone}}
         {{gender}}</div>
-</div>
+</div> -->

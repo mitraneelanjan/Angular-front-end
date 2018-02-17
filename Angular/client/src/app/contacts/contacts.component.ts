@@ -19,7 +19,7 @@ export class ContactsComponent implements OnInit {
 
   constructor(private contactService: ContactService) { }
 
-addContacts(){
+addContact(){
   const newContact = {
     name: this.name,
     age: this.age,
@@ -33,14 +33,14 @@ addContacts(){
     });
 }
 
-getContact(phone:number)
+/*getContact(phone:number)
 {
   this.contactService.getContacts(phone)
   .subscribe( contacts =>
   this.contact= contacts) ;
 
 }
-
+*/
   ngOnInit() {
 
 
