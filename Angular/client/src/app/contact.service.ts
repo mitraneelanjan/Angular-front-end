@@ -8,7 +8,7 @@ export class ContactService {
 
   constructor(private http: Http) { }
 
-  getContacts(phone){
+  getContacts(phone: number){
     return this.http.get('http://localhost:3000/api/contacts/'+phone)
       .map(res => res.json());
   }

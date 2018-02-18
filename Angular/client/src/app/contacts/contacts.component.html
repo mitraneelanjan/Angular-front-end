@@ -24,15 +24,24 @@
 <hr>
 
 
-<!--  <div class="container">
-<input [(ngModel)]="phone" placeholder="enter phone no.">
-<div >
+  <div class="container">
+        <input type="text" placeholder="enter phone no." [(ngModel)]= "ph" >  
 
-
-  </div>
-<button (click)="getContact(phone)" >getcontact</button>
-<div>{{name}}
-        {{age}}
-        {{phone}}
-        {{gender}}</div>
-</div> -->
+        <div class="col-md-3">
+                <button (click)="getContact(ph)" >getcontact</button>
+              </div>
+        <div *ngFor= "let contact of contacts">
+<div class="col-md-3">
+    {{contact.name}}
+</div>
+<div class="col-md-3">
+    {{contact.age}}
+</div>
+<div class="col-md-3">
+    {{contact.phone}}
+</div>
+<div class="col-md-3">
+    {{contact.gender}}
+</div>
+</div>
+</div> 

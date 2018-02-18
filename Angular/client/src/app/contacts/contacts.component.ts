@@ -10,12 +10,12 @@ import {Contact} from '../contact';
 })
 export class ContactsComponent implements OnInit {
 
-  contacts: Contact[];
-  contact: Contact;
-  name: string;
-  age: number;
-  phone: number;
-  gender: string;
+  contacts: Contact[] = [] ;
+  contact: Contact  ;
+  name: string  ;
+  age: number  ;
+  phone: number ;
+  gender: string ;
 
   constructor(private contactService: ContactService) { }
 
@@ -30,17 +30,26 @@ addContact(){
   this.contactService.addContact(newContact)
     .subscribe(contact => {
       this.contacts.push(contact);
+      console.log(this.contacts);
+      this.name = "";
+      this.age = null;
+      this.phone = null;
+      this.gender = "";
     });
 }
 
-/*getContact(phone:number)
+getContact(phone)
 {
-  this.contactService.getContacts(phone)
-  .subscribe( contacts =>
-  this.contact= contacts) ;
 
-}
-*/
+  var ph= null;
+  this.contactService.getContacts(ph=  phone)
+  .subscribe( contacts =>{
+  this.contacts = contacts
+  console.log(this.contacts);
+  });
+  }
+
+
   ngOnInit() {
 
 
